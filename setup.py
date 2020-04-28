@@ -11,5 +11,6 @@ setup(name='TechNotes',
     install_requires=[
         'mkdocs>=1.1',
         'mkdocs-bootswatch>=1.1',
+        'markdown-del-ins>=1.0.0',
     ],
 )
