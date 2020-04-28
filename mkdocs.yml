@@ -1,5 +1,11 @@
-site_name: My Docs
+site_name: TechNotes
 
 theme:
   name: yeti
   nav_style: light
+
+pages:
+  - 主页: "index.md"
+  - 目录:
+    - C/C++:
+      - C++11 智能指针: "C_CPP/SmartPointer/SmartPointer.md"
