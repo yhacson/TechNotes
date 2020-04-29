@@ -2,6 +2,7 @@
 ---
 
 ## 智能指针类型
+---
 
 * shared_ptr
 
@@ -39,6 +40,7 @@
     标准里没有引入boost的scoped_ptr
 
 ## 注意事项
+---
 
 * std::make_shared
 
