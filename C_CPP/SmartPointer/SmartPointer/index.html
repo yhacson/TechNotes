@@ -159,9 +159,9 @@ unique_ptr&lt;int&gt; cp3 = std::move(up); // 正确，up所指向的内存转�
 <li>
 <p>std::make_shared</p>
 <p>如果使用new分配内存并传进shared_ptr，会导致两次分配：</p>
-<p><img alt="img" src="/C_CPP/SmartPointer/make_shared_1.png" /></p>
+<p><img alt="img" src="../make_shared_1.png" /></p>
 <p>如果使用make_shared，只需要分配一次内存</p>
-<p><img alt="img" src="/C_CPP/SmartPointer/make_shared_2.png" /></p>
+<p><img alt="img" src="../make_shared_2.png" /></p>
 <p>通过make_shared生成的内存，会有等待所有强引用和弱引用（如weak_ptr）都计数为0时才会真正释放的问题。而通过new出来的内存则只需要强引用为0，则会立即释放。则会立即释放。更多详情：<a href="http://lanzkron.wordpress.com/2012/04/22/make_shared-almost-a-silver-bullet">make_shared, almost a silver bullet</a></p>
 </li>
 </ul></div>
