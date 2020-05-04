@@ -46,10 +46,10 @@
 
     如果使用new分配内存并传进shared_ptr，会导致两次分配：
 
-    ![img](/C_CPP/SmartPointer/make_shared_1.png)
+    ![img](./make_shared_1.png)
 
     如果使用make_shared，只需要分配一次内存
 
-    ![img](/C_CPP/SmartPointer/make_shared_2.png)
+    ![img](./make_shared_2.png)
 
     通过make_shared生成的内存，会有等待所有强引用和弱引用（如weak_ptr）都计数为0时才会真正释放的问题。而通过new出来的内存则只需要强引用为0，则会立即释放。则会立即释放。更多详情：[make_shared, almost a silver bullet](http://lanzkron.wordpress.com/2012/04/22/make_shared-almost-a-silver-bullet)
