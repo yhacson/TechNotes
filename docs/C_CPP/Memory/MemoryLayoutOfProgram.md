@@ -33,11 +33,11 @@ C中程序一般由这几个区域组成：
 ## 图片示意
 ---
 
-![img_1](/C_CPP/Memory/MemoryLayoutOfProgram/memory_layout_of_a_c_program_1.png)
+![img_1](./memory_layout_of_a_c_program_1.png)
 
 <center>*(图 1)*</center>
 
-![img_2](/C_CPP/Memory/MemoryLayoutOfProgram/memory_layout_of_a_c_program_2.png)
+![img_2](./memory_layout_of_a_c_program_2.png)
 
 <center>*(图 2)*</center>
 

@@ -1,4 +1,5 @@
 site_name: TechNotes
+site_url: https://yyyyl.github.io/TechNotes/
 
 theme:
   name: yeti
