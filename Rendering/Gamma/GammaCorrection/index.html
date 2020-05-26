@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
-        <link rel="canonical" href="https://yyyyl.github.io/TechNotes/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>TechNotes</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="canonical" href="https://yyyyl.github.io/TechNotes/Rendering/Gamma/GammaCorrection/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Gamma矫正 - TechNotes</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href=".">TechNotes</a>
+                <a class="navbar-brand" href="../../..">TechNotes</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,10 +33,10 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">主页</a>
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">主页</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">目录 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -45,11 +45,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="C_CPP/SmartPointer/SmartPointer/" class="dropdown-item">C++11 智能指针</a>
+    <a href="../../../C_CPP/SmartPointer/SmartPointer/" class="dropdown-item">C++11 智能指针</a>
 </li>
             
 <li>
-    <a href="C_CPP/Memory/MemoryLayoutOfProgram/" class="dropdown-item">C程序内存空间划分</a>
+    <a href="../../../C_CPP/Memory/MemoryLayoutOfProgram/" class="dropdown-item">C程序内存空间划分</a>
 </li>
     </ul>
   </li>
@@ -59,7 +59,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="Rendering/Gamma/GammaCorrection/" class="dropdown-item">Gamma矫正</a>
+    <a href="./" class="dropdown-item active">Gamma矫正</a>
 </li>
     </ul>
   </li>
@@ -74,12 +74,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../../../C_CPP/Memory/MemoryLayoutOfProgram/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="C_CPP/SmartPointer/SmartPointer/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -101,8 +101,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">主页</a>
+            <li class="nav-item" data-level="1"><a href="#gamma" class="nav-link">Gamma矫正</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#gamma_1" class="nav-link">一、Gamma</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">二、矫正</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -110,8 +118,40 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">主页</h1>
-<p>这是个人技术随笔记录的简易Blog</p></div>
+<h1 id="gamma">Gamma矫正</h1>
+<hr />
+<h2 id="gamma_1">一、Gamma</h2>
+<ol>
+<li>
+<p>详细解释参考<a href="https://learnopengl-cn.github.io/05%20Advanced%20Lighting/02%20Gamma%20Correction/">这里</a></p>
+</li>
+<li>
+<p>早期CRT显示器电压输入和输出关系是幂律曲线</p>
+</li>
+<li>
+<p>人眼对颜色的变化敏感度实际上受环境光的影响（图1）</p>
+</li>
+<li>
+<p>由于普通情况下我们对显示器暗部色彩的变化更加敏感，所以早期大厂定义了<a href="https://en.wikipedia.org/wiki/SRGB">sRGB色彩标准</a>，在当时存储数据小的情况下用更多的暗部数据来表现细节。图像数据保存在设备上实际是经过了gamma=0.45计算的，最后经过gamma=2.2输出到屏幕上，对用户来说是无感知的（图2）</p>
+</li>
+</ol>
+<p><center><img alt="" src="../gamma_correction_brightness_black.png" /></center></p>
+<p><center><img alt="" src="../gamma_correction_brightness_white.png" /></center></p>
+<p><center><em>图1. 上下两张图灰阶色值相同，但因为背景颜色不一样导致人眼对两张图的亮度变化感受也不一样</em></center></p>
+<p><img alt="" src="../picture_save_on_srgb.jpg" /></p>
+<p><center><em>图2. From <a href="https://www.gdcvault.com/play/1012351/Uncharted-2-HDR">Uncharted 2: HDR Lighting</a> By NaughtyDog</em></center></p>
+<h2 id="_1">二、矫正</h2>
+<ol>
+<li>
+<p>由于纹理基本是在sRGB空间下进行创建于保存，当一些高级算法需要对纹理数据在线性空间下进行计算时，会出现明显的偏色问题。程序中一般需要处理两个地方</p>
+</li>
+<li>
+<p>输入：OpenGL ES3之后的<a href="http://docs.gl/es3/glTexImage2D">glTexImage2D</a>方法提供了GL_SRGB和GL_SRGB_ALPHA两种纹理格式，GL会自动把在读取sRGB纹理后把其转到线性空间</p>
+</li>
+<li>
+<p>输出：进行线性计算后如果要输出到帧缓冲显示到屏幕上，需要重新把数据重新变回到gamma空间，这样图像再次经过显示器次幂转换，就能在屏幕上显示正确的颜色。在OpenGL里开启glEnable(GL_FRAMEBUFFER_SRGB)来实现</p>
+</li>
+</ol></div>
             </div>
         </div>
 
@@ -120,11 +160,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -192,8 +232,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1
-Build Date UTC : 2020-05-26 08:46:46
--->
