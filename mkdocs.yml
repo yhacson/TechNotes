@@ -13,3 +13,10 @@ pages:
       - C程序内存空间划分: "C_CPP/Memory/MemoryLayoutOfProgram.md"
     - 渲染:
       - Gamma矫正: "Rendering/Gamma/GammaCorrection.md"
+      - PBR: "Rendering/PBR/PBR.md"
+
+markdown_extensions:
+  - mdx_math
+  
+extra_javascript:
+- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
