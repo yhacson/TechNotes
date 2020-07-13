@@ -6,6 +6,7 @@
 
 [Substance The-PBR-Guide](https://academy.substance3d.com/courses/the-pbr-guide-part-1)
 [基于物理的渲染（PBR）白皮书](https://zhuanlan.zhihu.com/p/53086060)
+[猴子都能看懂的PBR](https://zhuanlan.zhihu.com/p/33464301)
 
 ---
 
