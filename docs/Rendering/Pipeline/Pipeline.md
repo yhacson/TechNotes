@@ -2,6 +2,7 @@
 
 参考:
 [猴子也能看懂的渲染管线](https://zhuanlan.zhihu.com/p/137780634)
+[OpenGL Wiki Rendering Pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
 
 ## 坐标转换
 
