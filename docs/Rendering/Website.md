@@ -14,6 +14,10 @@
 [UnityShader教程](https://catlikecoding.com/)
 
 ---
+## 引擎
+[游戏引擎十大核心竞争力](https://blog.csdn.net/pizi0475/article/details/7854943)
+
+---
 ## 发展史
 
 [从主机的世代演进看渲染技术的发展](https://www.bilibili.com/read/cv627784)
