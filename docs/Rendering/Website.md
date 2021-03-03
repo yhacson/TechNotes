@@ -8,6 +8,8 @@
 
 [Advances in Real-Time Rendering ](https://advances.realtimerendering.com/)
 
+[噪声](https://www.cnblogs.com/KillerAery/p/10765897.html)
+
 ---
 ## 教程
 
