@@ -10,6 +10,8 @@
 
 [噪声](https://www.cnblogs.com/KillerAery/p/10765897.html)
 
+[后处理](https://gamedev.stackexchange.com/questions/147952/what-is-the-order-of-postprocessing-effects)
+
 ---
 ## 教程
 
